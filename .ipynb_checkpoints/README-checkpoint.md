@@ -28,6 +28,9 @@ Here we will build and evaluate various machine-learning models to predict credi
 
 Use of the [imbalanced learn](https://imbalanced-learn.readthedocs.io) library to resample the LendingClub data and build and evaluate logistic regression classifiers using the resampled data.
 
+<details>
+<summary>Imbalanced classification algorithms</summary><br>
+    
 1. **Oversampling of the data using the `Naive Random Oversampler` and `SMOTE` algorithms**
     
     * Naive Random OverSampler:
@@ -57,6 +60,10 @@ Use of the [imbalanced learn](https://imbalanced-learn.readthedocs.io) library t
         sm = SMOTEENN(random_state=1)
         X_resampled, y_resampled = sm.fit_resample(X_train, y_train)
     ```
+</details>
+
+<details>
+<summary>Metrics Calculation</summary><br>    
 
 Following steps were performed for each of the algorithm:
 
@@ -74,12 +81,15 @@ Following steps were performed for each of the algorithm:
 
 Models                      |Accuracy Score          |Confusion Matrix                  | Classification Report 
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-*Random OverSampling* |0.7448 |<img src="Images/ros_cm.PNG" width="500" />|<img src="Images/ros_class_rept.PNG" width="500" />
-*SMOTE OverSampling* | 0.7130|<img src="Images/smote_cm.PNG" width="500" />|<img src="Images/smote_class_rept.PNG" width="500" />
-*ClusterCentroids UnderSampling* | 0.6469 | <img src="Images/us_cc_cm.PNG" width="500" />|<img src="Images/cc_us_class_rept.PNG" width="500" />
-*SMOTEENN Combination Sampling* |0.6917 | <img src="Images/sm_cm.PNG" width="500" />|<img src="Images/sm_class_rept.PNG" width="500" />
+*Random OverSampling* |0.7448 |<img src="Images/ros_cm.PNG" width="300" />|<img src="Images/ros_class_rept.PNG" width="500" />
+*SMOTE OverSampling* | 0.7130|<img src="Images/smote_cm.PNG" width="300" />|<img src="Images/smote_class_rept.PNG" width="500" />
+*ClusterCentroids UnderSampling* | 0.6469 | <img src="Images/us_cc_cm.PNG" width="300" />|<img src="Images/cc_us_class_rept.PNG" width="500" />
+*SMOTEENN Combination Sampling* |0.6917 | <img src="Images/sm_cm.PNG" width="300" />|<img src="Images/sm_class_rept.PNG" width="500" />
 
-##### Performance Analysis
+</details>
+
+<details>
+<summary>Performance Summary</summary><br>    
 
 Use the above to answer the following:
 
@@ -93,6 +103,9 @@ Use the above to answer the following:
 #### Ensemble Learning
 
 Use of the `balanced random forest classifier` and the `easy ensemble AdaBoost classifier` to predict loan risk and evaluate each model.
+
+<details>
+<summary>Ensemble classification algorithms</summary><br>    
 
 1. **Balanced Random Forest Classifier**
      ```
@@ -109,6 +122,11 @@ Use of the `balanced random forest classifier` and the `easy ensemble AdaBoost c
         eec = EasyEnsembleClassifier(random_state=1, n_jobs=1, n_estimators=100)
         eec_model = eec.fit(X_train, y_train)
      ```
+</details>
+
+<details>
+<summary>Metrics Calculations</summary><br>  
+    
 
 Following Steps were performed:
 
@@ -124,8 +142,8 @@ Following Steps were performed:
 
 Models                      |Accuracy Score          |Confusion Matrix                  | Classification Report 
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-*Balanced Random Forest Classifier* |0.7855 |<img src="Images/brf_cm.PNG" width="500" />|<img src="Images/brf_class_rpt.PNG" width="500" />
-*Easy Ensemble AdaBoost Classifier* | 0.9316|<img src="Images/eec_cm.PNG" width="500" />|<img src="Images/eec_class_rpt.PNG" width="500" />
+*Balanced Random Forest Classifier* |0.7855 |<img src="Images/brf_cm.PNG" width="300" />|<img src="Images/brf_class_rpt.PNG" width="500" />
+*Easy Ensemble AdaBoost Classifier* | 0.9316|<img src="Images/eec_cm.PNG" width="300" />|<img src="Images/eec_class_rpt.PNG" width="500" />
 
 
 5. For the balanced random forest classifier only, print the feature importance sorted in descending order (most important feature to least important) along with the feature score.
@@ -228,7 +246,11 @@ Models                      |Accuracy Score          |Confusion Matrix          
      (0.0, 'chargeoff_within_12_mths'),
      (0.0, 'acc_now_delinq')]
      ```
+</details>
 
+<details>
+<summary>Performance Summary</summary><br>
+    
 Use the above to answer the following:
 
 > Which model had the best balanced accuracy score?<br/>
@@ -239,9 +261,9 @@ Use the above to answer the following:
 > `Easy Ensemble AdaBoost Classifier`<br/><br/>
 > What are the top three features?<br/>
     ```
-        (0.09175752102205247, 'total_rec_prncp')
-        (0.06410003199501778, 'total_pymnt_inv')
-        (0.05764917485461809, 'total_pymnt')
+        * (0.09175752102205247, 'total_rec_prncp')<br/>
+        * (0.06410003199501778, 'total_pymnt_inv')<br/>
+        * (0.05764917485461809, 'total_pymnt')<br/>
     ```
      
 
