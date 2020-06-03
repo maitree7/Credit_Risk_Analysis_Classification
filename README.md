@@ -99,6 +99,8 @@ Use the above to answer the following:
     `Naive Random OverSampler`<br/><br/>
 > Which model had the best geometric mean score?<br/>
     `Naive Random OverSampler` <br/><br/>
+ 
+</details>
 
 #### Ensemble Learning
 
