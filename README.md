@@ -262,12 +262,10 @@ Use the above to answer the following:
 > Which model had the best geometric mean score?<br/>
 > `Easy Ensemble AdaBoost Classifier`<br/><br/>
 > What are the top three features?<br/>
-    ```
-        * (0.09175752102205247, 'total_rec_prncp')<br/>
-        * (0.06410003199501778, 'total_pymnt_inv')<br/>
-        * (0.05764917485461809, 'total_pymnt')<br/>
-    ```
-     
+    * 0.09175752102205247: total_rec_prncp<br/>
+    * 0.06410003199501778: total_pymnt_inv<br/>
+    * 0.05764917485461809: total_pymnt<br/>
+    
 
 - - -
 
